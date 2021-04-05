@@ -7,6 +7,9 @@
         <section class="status_form">
           @include('shared._status_form')
         </section>
+        <h4>Blog List</h4>
+        <hr>
+        @include('shared._feed')
       </div>
       <aside class="col-md-4">
         <section class="user_info">
@@ -18,7 +21,7 @@
     <div class="jumbotron">
       <h1>Hello Laravel</h1>
       <p class="lead">
-        What you are seeing <a href="https://learnku.com/courses/laravel-essential-training">Laravel </a> Demo Page。
+        What you are seeing <a href="https://learnku.com/courses/laravel-essential-training">Laravel </a> Demo
       </p>
       <p>
         Something starts from here.
