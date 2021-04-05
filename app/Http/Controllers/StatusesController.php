@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 
 use Auth;
 
+use App\Models\Status;
+
+
 class StatusesController extends Controller
 {
     //
@@ -23,6 +26,14 @@ class StatusesController extends Controller
             'content' => $request['content']
         ]);
         session()->flash('success', 'Your post has created！');
+        return redirect()->back();
+    }
+    
+    public function destroy(Status $status)
+    {
+        $this->authorize('destroy', $status);
+        $status->delete();
+        session()->flash('success', 'Post has been deleted！');
         return redirect()->back();
     }
 }
